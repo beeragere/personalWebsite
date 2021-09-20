@@ -1,9 +1,8 @@
-
-
  *, *::after, *::before{
 	 box-sizing: border-box;
 	 margin: 0;
-	 padding: 0; }
+	 padding: 0; 
+}
 
  :root{
 	 font-size: 20px;
@@ -25,8 +24,6 @@
 
 
  /* this is the menu button */
-
-
  .outerMenu{
 	 position: fixed;
 	 z-index: 10;
