@@ -1,0 +1,292 @@
+ *, *::after, *::before{
+	 box-sizing: border-box;
+	 margin: 0;
+	 padding: 0; }
+
+ :root{
+	 font-size: 18px;
+	 font-weight: 10;
+	 font-family: 'Lora', serif;
+
+	--subColor: #ff6d00;
+ 	--darkColor: #04030F;
+ 	--mainColor: #3c096c;
+ }
+
+ body{
+	 background-color: rgb(236, 235, 235);
+	 height: max-content;
+	 opacity: 1;
+	 user-select: none;
+ }
+
+ /* here is the menu (hamburger) */
+
+ .outerMenu{
+	 position: fixed;
+	 z-index: 10;
+	 visibility: visible;
+ }
+.hamburger{
+	position: fixed;
+	right: 20px;
+	top: 34px;
+
+	background-color: white;
+	height: 0.2rem;
+	width: 1.5rem;
+
+	border-radius: 10px;
+
+	z-index: 1;
+
+	transition: all 0.3s;
+}
+.hamburger::after,
+.hamburger::before{
+	content: "";
+	position: absolute;
+
+	background-color: white;
+	height: 0.2rem;
+	width: 1.5rem;
+
+	border-radius: 10px;
+
+	transition: all 0.3s;
+}
+
+.hamburger::after{
+	transform: translateY(10px);
+}
+
+.hamburger::before{
+	transform: translateY(-10px);
+}
+
+/* animation for hamburger */
+.hamburgerOpen{
+	transform: translateX(-50px);
+	background-color: rgb(255, 255, 255, 0);
+}
+
+.hamburgerOpen::after{
+	transform: rotate(45deg);
+}
+
+.hamburgerOpen::before{
+	transform: rotate(-45deg);
+}
+
+/* innerMenu */
+.innerMenu{
+	display: flex;
+	flex-direction: column;
+
+	position: fixed;
+	right: 0px;
+	top: 0px;
+
+	background-color: var(--mainColor); 
+	height: 5.5rem;
+	width: 5.5rem;
+
+	border-radius: 1000px;
+
+	transform: translate(25px, -25px);
+
+	transition: all 0.4s;
+}
+
+.list{
+	user-select: none;
+	position: relative;
+	top:8rem;
+	left: 4rem;
+	color: white;
+	z-index: 4;
+}
+
+.list>ul{
+	cursor: pointer;
+	margin: 10px;
+	padding: 3px;
+	width: 8ch;
+	text-align: center;
+	background-color: rgb(255, 255, 255, 0.1);
+
+	border-radius: 5px;
+}
+
+.list>ul:hover{
+	background-color: rgb(255, 255, 255, 0.5);
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+.innerMenuOpen{
+	height: 20rem;
+	width: 20rem;
+	transform: translate(150px, -50px);
+}
+
+ /*  other stuff   */
+ .spaceAround{
+	 margin: 2rem;
+ }
+
+ a{
+	 text-decoration: none;
+ }
+
+ a:active{
+	 color: var(--darkColor);
+ }
+ .name{
+	position: relative;
+	left: 10px;
+	color: var(--darkColor);
+	line-height: 1rem;
+ }
+
+ .name::before{
+	content: "";
+	position: absolute;
+	height: 1.1rem;
+	width: 1.1rem;
+	background-color: var(--mainColor);
+	transform: translateX(-24px);
+
+	border-radius: 40px;
+
+ }
+
+ .degree{
+	 padding: 1.5;
+	 display: block;
+	 margin-top: 0;
+	 color: rgb(0, 0, 0, 0.4);
+	 font-weight: 0;
+	 margin-bottom: 1rem;
+ }
+
+ .education{
+	 margin: 1rem;
+	 padding: 1.5rem;
+	 border-radius: 10px;
+	 box-shadow: 0 0 5px 1px var(--mainColor);
+ }
+
+ .achieve{
+	 margin: 1rem;
+	 padding: 1.5rem;
+	 border-radius: 10px;
+	 box-shadow: 0 0 5px 1px var(--mainColor);
+ }
+
+ .skills{
+	 position: relative;
+	 margin: 1rem;
+	 padding: 1rem;
+	 border-radius: 10px;
+	 box-shadow: 0 0 5px 1px var(--mainColor);
+ }
+
+ .skills>ul{
+	 display: flex;
+	 flex-direction: column;
+	 align-content: center;
+	 align-items: flex-start;
+	 justify-content: space-around;
+
+	 color: white;
+	 font-weight: 900;
+	 margin: 1em;
+	 padding: 0.2em;
+	 height: 2em;
+	 width: max-content;
+
+	 border-radius: 5px;
+	 background-color: var(--subColor);
+	 box-shadow: 0 0 2px 1px var(--subColor);
+ }
+ h2{ position: relative;
+	 margin-bottom: 1rem;
+ }
+ h2::after{
+	 content: "";
+	 position: absolute;
+	 top: 100%;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 height: 4px;
+
+	 background-color: var(--mainColor);
+ }
+
+ h4{
+	 position: relative;
+	 left: 20px;
+ }
+ h4::after{
+	 content: "";
+	 position: absolute;
+
+	 left: 0;
+	 top: 5px;
+	 bottom: 0;
+	 width: 20px;
+	 height: 20px;
+	 background-color: var(--subColor);
+
+	 border-radius: 10px;
+	 transform: translateX(-25px);
+	 box-shadow: 0 0 0.5px 1px var(--subColor);
+ }
+
+
+ p{
+	 margin-left: 1rem;
+ }
+ .text{
+	 margin-left: 2.3rem;
+	 margin-bottom: 1.5rem;
+ }
+
+
+.skills::after{
+	content: "";
+	position: absolute;
+
+	background-color: var(--subColor);
+
+	left: 0%;
+	right: 0%;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	
+	transform: translateY(40px);
+}
+
+.footer{
+	margin: 1rem;
+	margin-top: 4rem;
+}
+
+.mail{
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.phone{
+	cursor: auto;
+	display: block;
+}
+
+ .fasColor{
+	 color: var(--subColor);
+ }

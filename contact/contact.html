@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://kit.fontawesome.com/5f00b8336d.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> 
+
+	<script src="./contact.js"></script>
+	<link rel="stylesheet" href="./contact.css">
+	<title>contact</title>
+
+</head>
+<body>
+
+	<div class="outerMenu">
+		<div class="hamburger"></div>
+		<div class="innerMenu">
+			<div class="list" onclick="event.stopPropagation()">
+				<ul><a href="../home/main.html">Home</a></ul>
+				<ul><a href="../resume/resume.html">Resume</a></ul>
+				<ul><a href="./contact.html">Contact</a></ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="spaceAround">
+		<a href="../home/main.html">
+			<h3 class="name">Shubhanga R B</h3>
+			<span class="degree">electrical engineer</span>
+		</a>
+
+		<div class="contact">
+			<h2>Contact</h2>
+			<p>looking forward to hearing from you!!!</p>
+
+			<fieldset>
+				<label for="name">Name</label>
+				<input id="name" name="name" type="text" value="" placeholder="full name" autocomplete="off"><br>
+				
+				<label for="email">Mail</label>
+				<input id="email" name="email" type="text" value="" placeholder="xyx@gmail.com" autocomplete="off"><br>
+				
+				<label for="subject">Subject</label>
+				<input id="subject" name="subject" type="text" value="" placeholder="sub" autocomplete="off"><br>
+				
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="22" rows="05" placeholder="what's on your mind?"></textarea>
+
+				<button>Submit</button>
+			</fieldset>
+
+
+		</div>	
+
+	<footer class="footer">
+		<span class="mail">
+			<h4 style="position: static;"><span class="fasColor fas fa-envelope"></span> mail</h4>
+			<span>shubhangarb@gmail.com</span>
+		</span> 
+		<span class="phone">
+			<h4 style="position: static;"><span class="fasColor fas fa-phone"></span> Phone</h4>
+			<span>+916361059146</span>
+		</span>
+	</footer>
+	</div>
+
+</body>
+
+<script>
+	var outerMenu = document.querySelector(".outerMenu");
+	var innerMenu = document.querySelector(".innerMenu");
+	var hamburger = document.querySelector(".hamburger");
+	var checkOpen = false;
+	outerMenu.addEventListener("click", () => {
+		if(checkOpen == false){
+			innerMenu.classList.add("innerMenuOpen");
+			hamburger.classList.add("hamburgerOpen");
+			checkOpen = true;
+		}
+
+		else{
+			innerMenu.classList.remove("innerMenuOpen");
+			hamburger.classList.remove("hamburgerOpen");
+			checkOpen = false;
+		}
+	})
+
+</script>
+
+</html>

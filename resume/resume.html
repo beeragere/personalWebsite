@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/5f00b8336d.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./resume.css">
+	<title>Resume</title>
+</head>
+<body>
+
+	<div class="outerMenu">
+		<div class="hamburger"></div>
+		<div class="innerMenu">
+			<div class="list" onclick="event.stopPropagation()">
+				<ul><a href="../home/main.html">Home</a></ul>
+				<ul><a href="./resume.html">Resume</a></ul>
+				<ul><a href="../contact/contact.html">Contact</a></ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="spaceAround">
+		<a href="../home/main.html">
+			<h3 class="name">Shubhanga R B</h3>
+			<span class="degree">electrical engineer</span>
+		</a>
+		<div class="education">
+			<h2>education</h2>
+			<p>2017 - 2021</p>
+			<h4>Vidya Vardhaka College Of Engineering, Mysuru</h4>
+			<p class="text">BE electrical and electronics</p>
+
+			<p>2015 - 2017</p>
+			<h4>Poorna Prajna Pre University College Admar, Udupi</h4>
+			<p class="text">PU PCMS</p>
+
+			<p>2014 - 2015</p>
+			<h4>Prajna Bharathi Vidya Kendra, Nittur</h4>
+			<p class="text">SSLC</p>
+
+		</div>
+
+		<div class="achieve">
+			<h2>achievements</h2>
+			<h4>1st place in National level hackathon (2020)</h4>
+			<p class="text">S.B Jain Institute Of Technology,
+			Management and Research, Nagpur</p>
+			
+			
+			<h4>1st place in inter disciplinary mini project
+			competition for "ASP Energy Meter" (2019)</h2>
+			<p class="text">Vidya Vardhaka College Of Engineering
+			Mysuru</p>
+			
+			<h4>2nd place in State Level Project
+			Competition for "Border Security Defence
+			System" (2019)
+			</h4>
+			<p class="text">
+			Vidya Vikas College Of Engineering Mysuru
+			</p>
+
+			<h4>
+			Consolation prize in mini project
+			competition for "Single axis Solar Tracker"
+			(2018)
+			</h4>
+			<p class="text">
+			Vidya Vardhaka College Of Engineering
+			</p>
+		</div>		
+		<div class="achieve">
+			<h2>volunteer experience</h2>
+			<h4>Coordinated in "Arduino and Embedded Systems" workshop</h4>
+			<p>at Vidya Vardhaka College Of
+			Engineering. (2018 - 2021)</p>
+			
+			<h4>Coordinated in "Development board and Soldering"
+			workshop</h4>
+			<p>at Vidya Vardhaka College Of
+			Engineering. (2018 - 2021)</p>
+			 
+			<h4>Peer tutored for V-innovative LAB</h4>
+			<p>at Vidya
+			Vardhaka College Of Engineering. (2017-2018)</p>
+			 
+			
+		</div>		
+		<div class="skills">
+			<h2>skills</h2>
+			<ul>C programming</ul>
+			<ul>C++ programming</ul>
+			<ul>HTML</ul>
+			<ul>CSS</ul>
+			<ul>Javascript</ul>
+			<ul>PIC MCU programming</ul>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<span class="mail">
+			<h4 style="position: static;"><span class="fasColor fas fa-envelope"></span> mail</h4>
+			<span>shubhangarb@gmail.com</span>
+		</span> 
+		<span class="phone">
+			<h4 style="position: static;"><span class="fasColor fas fa-phone"></span> Phone</h4>
+			<span>+916361059146</span>
+		</span>
+	</footer>
+</body>
+
+<script>
+	var outerMenu = document.querySelector(".outerMenu");
+	var innerMenu = document.querySelector(".innerMenu");
+	var hamburger = document.querySelector(".hamburger");
+	var checkOpen = false;
+	outerMenu.addEventListener("click", () => {
+		if(checkOpen == false){
+			innerMenu.classList.add("innerMenuOpen");
+			hamburger.classList.add("hamburgerOpen");
+			checkOpen = true;
+		}
+
+		else{
+			innerMenu.classList.remove("innerMenuOpen");
+			hamburger.classList.remove("hamburgerOpen");
+			checkOpen = false;
+		}
+	})
+
+</script>
+
+</html>
