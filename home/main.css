@@ -246,7 +246,7 @@ a{
 	justify-content: space-around;
 	justify-items: center;
 
-	max-width: 40rem;
+	max-width: 22rem;
 
 	animation: fadeIn 1s 1s forwards ease;
 }
@@ -330,5 +330,96 @@ a{
 
 	to{
 		transform: translateY(0px);
+	}
+}
+
+@media (min-width: 600px){
+	.gridContent{
+		display: grid;
+		place-items: center;
+	}
+
+	.tabs{
+		width: 20rem;
+		padding: 2rem;
+		border: 1px solid var(--mainColor);
+		border-radius: 5px;
+	}
+
+	.gridContent{
+		height: max-content;
+	}
+	.content{
+		padding: 2rem;
+		border: 1px solid var(--mainColor);
+		border-radius: 5px;
+	}
+
+	.footer{
+		width: 20rem;
+		padding: 2rem;
+		border: 1px solid var(--mainColor);
+		border-radius: 5px;
+	}
+}
+@media (min-width: 1000px){
+	/* 
+	outerMenu
+	gridContent
+		content
+		tabs
+		footer
+	*/
+	body{
+		height: 100vh;
+	}
+
+	.gridContent{
+		height: 100vh;
+		display: grid;
+		grid-template-areas:
+		"content tabs"
+		"content footer";
+		place-items:unset;
+		justify-content: space-evenly;
+		justify-items:center;
+	}
+
+	.content{
+		line-height: 50px;
+		grid-area: content;
+		width: 30rem;
+		padding-top: 4rem;
+		padding: 2rem;
+		border: 1px solid var(--subColor);
+		border-radius: 5px;
+
+	}
+
+	.tabs{
+		flex-direction: column;
+		justify-content: space-around;
+		place-items: center;
+		width: 22rem;
+		grid-area: tabs;
+
+		padding: 2rem;
+		border: 1px solid var(--subColor);
+		border-radius: 5px;
+
+		top: 5rem;
+	}
+
+	.tabs::after{
+		background-color: var(--mainColor);
+	}
+	.footer{
+		grid-area: footer;
+
+		height: max-content;
+		margin-top: 10rem;
+		padding: 3rem;
+		border: 1px solid var(--subColor);
+		border-radius: 5px;
 	}
 }
