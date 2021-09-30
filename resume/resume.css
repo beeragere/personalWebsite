@@ -80,7 +80,7 @@
 
 .hamburger::before{
 	transform: translateY(-10px);
-}
+}		
 
 /* animation for hamburger */
 .hamburgerOpen{
@@ -154,6 +154,10 @@ a{
  .spaceAround{
 	 margin: 2rem;
  }
+ .profile > a{
+	display: block;
+	width: max-content;
+}
 
  .profile{
 	 display: block;
@@ -196,6 +200,9 @@ a{
 	 transform: translateX(20px);
  }
 
+ .boxes{
+	 overflow: hidden;
+ }
  .education{
 	 margin: 1rem;
 	 padding: 1.5rem;
@@ -343,7 +350,9 @@ a{
 	.boxes{
 		width: 30rem;
 	}
-
+	 .experience > p{
+		 margin-bottom: 2rem;
+	 }
 	.footer{
 		height: 5rem;
 		width: 75%;
